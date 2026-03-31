@@ -1,0 +1,212 @@
+/* Property Detail Pages - Add this to the end of style.css */
+
+/* Property Hero */
+.property-hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                var(--property-bg, center/cover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.property-hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.property-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffd700;
+    margin-bottom: 2rem;
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-btn i {
+    font-size: 1.3rem;
+}
+
+.full-width {
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+/* Property Details */
+.property-details {
+    padding: 80px 0;
+    background: #f8f9ff;
+}
+
+.property-main-image {
+    margin-bottom: 3rem;
+}
+
+.property-main-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+
+.property-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.property-description h2,
+.property-specs h3,
+.property-features h3,
+.property-location h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.property-description p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.spec-item:hover {
+    transform: translateY(-5px);
+}
+
+.spec-item i {
+    font-size: 2rem;
+    color: #667eea;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f4ff;
+    border-radius: 12px;
+}
+
+.spec-item h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.spec-item p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.property-features ul {
+    list-style: none;
+}
+
+.property-features li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.1rem;
+}
+
+.property-features li:last-child {
+    border-bottom: none;
+}
+
+.property-features i {
+    color: #25D366;
+    font-size: 1.2rem;
+    width: 20px;
+}
+
+.property-location {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.property-location p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Responsive for Property Pages */
+@media (max-width: 768px) {
+    .property-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .property-price {
+        font-size: 2rem;
+    }
+    
+    .property-info {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .property-main-image img {
+        height: 300px;
+    }
+    
+    .specs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .property-hero {
+        height: 60vh;
+    }
+    
+    .specs-grid {
+        grid-template-columns: 1fr;
+    }
+}
